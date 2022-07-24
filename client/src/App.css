@@ -14,7 +14,7 @@
   box-shadow: 2px 2px 5px black;
   position: sticky;
   top: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 .Navbar li {
   list-style: none;
