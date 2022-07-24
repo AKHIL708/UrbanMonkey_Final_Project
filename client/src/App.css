@@ -1,0 +1,356 @@
+/* styling of Navbar component  */
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+.Navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid;
+  box-shadow: 2px 2px 5px black;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+.Navbar li {
+  list-style: none;
+}
+.Navbar li a {
+  text-decoration: none;
+  color: black;
+  margin: 0px 5px;
+}
+.Navbar li a:hover {
+  text-decoration: underline;
+  transition-duration: 0.2s;
+  text-shadow: 1px 1px 2px gray;
+  color: black;
+}
+.NavbarImg {
+  height: 85px;
+  border-radius: 120px;
+}
+.NavbarHeading {
+  text-shadow: 2px 5px 3px gray;
+}
+.NavbarBottom {
+  display: flex;
+  height: 25px;
+  margin-left: auto;
+  font-weight: bolder;
+  justify-content: flex-end;
+  background-image: linear-gradient(to right, black, gray, white);
+}
+/*Home page  editing  */
+.HomePageHeading {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  color: gray;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: underline;
+}
+.HomePageHeadingTwo {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-decoration: underline;
+}
+.HomePageNavabar {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  /* background-color: gray; */
+}
+.boxOneImg {
+  height: 270px;
+  /* margin: 0px 40px; */
+}
+.boxOne {
+  margin: 15px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: fit-content;
+}
+.boxOne:hover {
+  box-shadow: 8px 8px 15px black;
+  transition-duration: 0.2s;
+  margin-top: 2px;
+}
+.line {
+  margin-top: 20px;
+  box-shadow: 2px 2px 4px black;
+}
+/*editing of second seciton */
+.arrival {
+  align-items: center;
+  text-align: center;
+  margin-top: 35px;
+  border: 1px solid;
+  background-color: black;
+  text-shadow: 1px 1px 4px gray;
+  color: white;
+}
+.enclose {
+  width: 700px;
+}
+.secondSection {
+  /* border: 1px solid ; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.secondSectionImage {
+  height: 350px;
+}
+.rowSetting {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Editing of footer section  */
+.FooterSection {
+  background-color: rgb(1, 1, 19);
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.one {
+  margin: 0px 25px;
+}
+.FooterHeading {
+  margin-bottom: 25px;
+  text-decoration: underline;
+}
+
+.text {
+  text-align: left;
+}
+.text p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  text-shadow: 0px 0px 3px rgb(98, 63, 223);
+  transition-duration: 0.2s;
+}
+
+.mysection {
+  /* border: 1px solid white; */
+  width: 800px;
+  margin-left: 60px;
+  /* margin-bottom: 32px; */
+}
+.accounts {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* margin-bottom: ; */
+  align-items: center;
+}
+.socialAccounts {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+.socialAccounts a {
+  text-decoration: none;
+  margin: 0px 80px;
+}
+.accounts{
+  text-decoration: underline;
+}
+.iconOne {
+  color: white;
+  font-size: 125px;
+}
+.iconTwo {
+  color: rgb(0, 119, 181);
+  font-size: 125px;
+}
+.iconThree {
+  /* color:#171515; */
+  color: gray;
+
+  font-size: 125px;
+}
+
+/*       registration form editing is from here */
+.registerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 30px 85px;
+}
+
+.registerForm:hover {
+  box-shadow: 5px 5px 10px black;
+  border-radius: 25px;
+  transition-duration: 0.4s;
+}
+.registeriCon {
+  margin-right: 15px;
+}
+.registerForm form input {
+  border: none;
+  margin: 20px 0px;
+  border-bottom: 2px solid;
+  border-color: rgb(45, 45, 198);
+}
+
+.inputBtn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  border: none;
+  border: 2px solid green;
+  border-bottom: none;
+  margin-top: 52px;
+}
+
+/* login Form editing */
+
+.loginForm {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  flex-direction: column;
+}
+.loginForm input {
+  font-size: 20px;
+  border: none;
+  margin-top: 20px;
+  border: none;
+  border-bottom: 1px solid green;
+  color: black;
+}
+.loginFormContainer {
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 90px 40px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px gray;
+}
+/*  main page form editing is here*/
+.mainPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  box-shadow: 5px 5px 10px black;
+  border: none;
+  border-radius: 22px;
+  padding: 10px ;
+  background-color: gray;
+  background-image: linear-gradient(to right, #bdc3c7 , #2c3e50 );
+}
+
+.SectionOne {
+  background-color: white;
+  border: 1px solid;
+  text-align: left;
+  padding: 20px 25px;
+  margin: 10px 18px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px black;
+}
+.SectionOneImg {
+  width: auto;
+  height: 300px;
+ 
+}
+
+.btnSection button {
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 2px;
+  margin: 0px 2px;
+}
+.btnSection input {
+  width: 20px;
+}
+.CartSymbol {
+  width: auto;
+  height: 30px;
+  margin-right: 15px;
+}
+.CartSymbol sup {
+  width: 20px;
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 300;
+}
+.NavbarMain{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  background-image: linear-gradient();
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid;
+  box-shadow: 2px 2px 5px black;
+  height: 50px;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+.NavbarHeadingMain{
+  display: flex;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.CartLink{
+  text-decoration: none;
+  color:  black;
+}
+
+/* cart component editing is here */
+.cartContainer{
+  border: 1px solid;
+  display: flex;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 15px;
+  box-shadow: 5px 5px 10px black;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+}

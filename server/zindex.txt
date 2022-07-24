@@ -1,0 +1,6 @@
+the registration form contains only
+
+to do list in the app ..
+---> form validation should be properly checked 
+---> bcrypt
+--->jwt
