@@ -1,18 +1,21 @@
-import { createStore  } from 'redux';
+import { createStore } from "redux";
 
-const reducerFn = (state={counter : 0 , amount : 0}, action) =>{
-    if(action.type === 'INC'){
-       return {counter : state.counter +1}
-    }
-    if(action.type === 'DEC'){
-        return {counter : state.counter - 1}
-    }
-    if(action.type === 'AMOUNT'){
-        return { amount : state.amount + 500}
-    }
-    
-   return state;
-}
+const reducerFn = (state = { counter: 0, amount: 0 }, action) => {
+  if (action.type === "Add To Cart") {
+    return {
+      counter: state.counter + 1,
+      amount: state.amount + action.product.productPrice,
+    };
+  }
+  if (action.type === "Remove From Cart") {
+    return {
+      counter: state.counter - 1,
+      amount: state.amount - action.product.productPrice,
+    };
+  }
 
-const store = createStore(reducerFn)
-export default  store;
+  return state;
+};
+
+const store = createStore(reducerFn);
+export default store;

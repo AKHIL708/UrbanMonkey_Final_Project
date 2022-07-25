@@ -119,76 +119,72 @@ export default function HomePage() {
         <h1> New Arrivals </h1>
       </div>
 
-<div className="rowSetting" onClick={Alert}>
-
-      <div className="secondSection" onClick={Alert}>  
-
-      <img
-          className="secondSectionImage"
-          src="https://image.cnbcfm.com/api/v1/image/106542009-1589805742445michaeljordansgame-wornautographednikeairjordan1s1985_1.jpg?v=1589805820&w=1920&h=1080"
-          alt=""
-          />    
-        <div className="enclose">
-          <h1>Urban Shoes </h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-            quasi natus. Illo sed officia ea maxime. Ipsa minus debitis veniam.
-          </p>
-        </div>
- 
-      </div>
-      
-      <div className="secondSection">  
-
-        <div className="enclose">
-          <h1>Ripped Top </h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-            quasi natus. Illo sed officia ea maxime. Ipsa minus debitis veniam.
-          </p>
-        </div>
-
-        <img
-          className="secondSectionImage"
-          src="https://i.pinimg.com/originals/6a/c3/31/6ac33130c81145c475f032b844771146.jpg"
-          alt=""
-          />     
-      </div>
-      <div className="secondSection">  
-
-<img
-    className="secondSectionImage"
-    src="https://i.pinimg.com/originals/c7/7a/b4/c77ab422c079eb2373a0d733f4ab8f84.jpg"
-    alt=""
-    />    
-  <div className="enclose">
-    <h1>Ripped Jackets  </h1>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-      quasi natus. Illo sed officia ea maxime. Ipsa minus debitis veniam.
-    </p>
-  </div>
-
-</div>
-      <div className="secondSection">  
-  <div className="enclose">
-    <h1>Ripped Jackets For Girls  </h1>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-      quasi natus. Illo sed officia ea maxime. Ipsa minus debitis veniam.
-    </p>
-  </div>
-
-<img
-    className="secondSectionImage"
-    src="https://i.pinimg.com/736x/32/28/14/3228140aded9e0f026e53455d425f58f.jpg"
-    alt=""
-    />    
-
-</div>
-      
+      <div className="rowSetting" onClick={Alert}>
+        <div className="secondSection" onClick={Alert}>
+          <img
+            className="secondSectionImage"
+            src="https://image.cnbcfm.com/api/v1/image/106542009-1589805742445michaeljordansgame-wornautographednikeairjordan1s1985_1.jpg?v=1589805820&w=1920&h=1080"
+            alt=""
+          />
+          <div className="enclose">
+            <h1>Urban Shoes </h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              quasi natus. Illo sed officia ea maxime. Ipsa minus debitis
+              veniam.
+            </p>
           </div>
-          <Footer/>
+        </div>
+
+        <div className="secondSection">
+          <div className="enclose">
+            <h1>Ripped Top </h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              quasi natus. Illo sed officia ea maxime. Ipsa minus debitis
+              veniam.
+            </p>
+          </div>
+
+          <img
+            className="secondSectionImage"
+            src="https://i.pinimg.com/originals/6a/c3/31/6ac33130c81145c475f032b844771146.jpg"
+            alt=""
+          />
+        </div>
+        <div className="secondSection">
+          <img
+            className="secondSectionImage"
+            src="https://i.pinimg.com/originals/c7/7a/b4/c77ab422c079eb2373a0d733f4ab8f84.jpg"
+            alt=""
+          />
+          <div className="enclose">
+            <h1>Ripped Jackets </h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              quasi natus. Illo sed officia ea maxime. Ipsa minus debitis
+              veniam.
+            </p>
+          </div>
+        </div>
+        <div className="secondSection">
+          <div className="enclose">
+            <h1>Ripped Jackets For Girls </h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+              quasi natus. Illo sed officia ea maxime. Ipsa minus debitis
+              veniam.
+            </p>
+          </div>
+
+          <img
+            className="secondSectionImage"
+            src="https://i.pinimg.com/736x/32/28/14/3228140aded9e0f026e53455d425f58f.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <Footer />
     </>
   );
 }
