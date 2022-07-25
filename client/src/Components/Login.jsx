@@ -6,8 +6,10 @@ export default function Login() {
   const navigate = useNavigate();
   const [email , setEmail] = useState();
   const [password , setPassword ] = useState();
+
   const loginUser = async (e)=>{
     e.preventDefault();
+    
     const res = await fetch('/login',{
       method:"POST",
       headers : {

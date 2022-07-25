@@ -1,5 +1,7 @@
 const express = require("express")
 const router = express.Router()
+const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
 const User = require("../model/schema");
 
 
@@ -77,22 +79,38 @@ router.post("/register", async(req,res)=>{
 
 router.post("/login", async (req,res)=>{
     try{
-        const email = req.body.email;
-        const password = req.body.password;
-        const data = await User.findOne({email,password})
-        
-        if(!email || !password){
-            res.status(400).json({message : "plz enter you login details"})
-        }else if(data){
-            res.send("login successful ")
-        }else{
-            res.status(400).json({message : "login un--successful"})
-        }
-    }catch(e){
-        console.log(e)
+     let token;
+    const {email , password} = req.body;
+    
+    if(!email || !password){
+      return res.status(400).json({message : "fill the form"});
+  
     }
-})
-
+    const UserLogin = await User.findOne({ email : email })
+  
+    if(UserLogin){
+      const isMatch = await bcrypt.compare(password,UserLogin.password)
+  
+     token = await UserLogin.generateAuthToken();
+     console.log(token)
+  
+     res.cookie("akhiljwt", token , {
+      expires : new Date(Date.now() + 25892000000)
+     })
+      if(!isMatch){
+        res.status(400).json({erro : "invalid password"})
+      }else{
+        res.json({message : "user signin successful"})
+      }
+    }else{
+      res.status(400).json({error : "invalid email"})
+    }
+  
+   }catch(e){
+    res.send(e)
+    console.log(e)
+   }
+    })
 
 
 module.exports = router;

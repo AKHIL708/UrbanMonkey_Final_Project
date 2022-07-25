@@ -13,7 +13,7 @@ export default function HomePage() {
           <img
             className="boxOneImg"
             src="https://image.made-in-china.com/44f3j00JVBEDzuoZkpw/Men-s-Top-Tie-Dye-T-Shirt-Multi-Color-Mixed-Tshirt-3D-Digital-Printing-Loose-Casual-T-Shirt.jpg"
-            alt="coloured t shirt"
+            alt="coloured T-shirt"
           />
           <h4>30% Off on T-shirt</h4>
         </div>
