@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { FaVoicemail } from "react-icons/fa";
+import { FaKey } from "react-icons/fa";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -43,36 +45,42 @@ export default function Login() {
           <Link to="/register">Register</Link>
         </li>
       </div>
+      <div className="LoginBackgroundColor">
+        <div className="loginFormContainer">
+          <div className="LoginHeading">
+          <h2>Sign In</h2>
+          <p>Login to manage your account</p>
+          </div>
 
-      <div className="loginFormContainer">
-        <form method="POST" className="loginForm">
-          <input
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your Email"
-            name="email"
-          />
-          <input
-            type="text"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Your password"
-            name="password"
-          />
-          <input
-            onClick={loginUser}
-            type="submit"
-            style={{
-              borderRadius: "5px",
-              padding: "0px 5px",
-              marginLeft: "auto",
-              marginTop: "15px",
-              color: "white",
-              backgroundColor: "green",
-            }}
-          />
-        </form>
+          <form method="POST" className="loginForm">
+            <div className="FormSymbols">
+              <FaVoicemail className="LoginFormSymbol" />
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your Email"
+                name="email"
+              />
+            </div>
+            <div className="FormSymbols">
+              <FaKey className="LoginFormSymbol" />
+              <input
+                type="text"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Your password"
+                name="password"
+              />
+            </div>
+            <input
+              onClick={loginUser}
+              className="LoginBtn"
+              type="submit"
+              style={{backgroundColor : "#1DA1F2",border:"none",fontSize:"15px"}}
+            />
+          </form>
+        </div>
       </div>
     </>
   );

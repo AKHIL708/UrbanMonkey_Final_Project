@@ -72,7 +72,9 @@ export default function Register() {
         </li>
       </div>
 
+  
       <div className="registerForm">
+        <img  src="https://i.pinimg.com/736x/f3/40/d2/f340d2a1cb84dff9a7649135f23726c8.jpg" alt="" />
         <form method="POST" className="form">
           <div className="inputVal">
             <FaUser className="registeriCon" />

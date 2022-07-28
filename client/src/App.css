@@ -178,7 +178,7 @@
   text-decoration: none;
   margin: 0px 80px;
 }
-.accounts{
+.accounts {
   text-decoration: underline;
 }
 .iconOne {
@@ -199,6 +199,8 @@
 /*       registration form editing is from here */
 .registerForm {
   display: flex;
+  background-color: white;
+  color: black;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -207,6 +209,11 @@
   margin-right: auto;
   margin-top: 30px;
   padding: 30px 85px;
+}
+.registerForm img {
+  width: auto;
+  height: 250px;
+  margin-right: 55px;
 }
 
 .registerForm:hover {
@@ -246,21 +253,67 @@
 }
 .loginForm input {
   font-size: 20px;
-  border: none;
   margin-top: 20px;
-  border: none;
-  border-bottom: 1px solid green;
+  font-size: 18px;
   color: black;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 7px;
+  border: 1px solid rgb(182, 182, 204);
+
+  /* border: none; */
+}
+.FormSymbols,
+.FormSymbol2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
 }
 .loginFormContainer {
   display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+  flex-direction: column;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  padding: 90px 40px;
+  padding: 30px 40px;
   border-radius: 25px;
-  box-shadow: 2px 2px 5px gray;
+  border: 1px solid rgb(192, 188, 188);
+}
+.LoginHeading h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+.LoginHeading p {
+  margin-bottom: 35px;
+  color: rgb(161, 158, 158);
+}
+.LoginBtn {
+  border-radius: 5px;
+  padding: 0px 5px;
+  margin-left: auto;
+  margin-top: 15px;
+  color: white;
+  background-color: black;
+}
+.LoginFormSymbol {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+.LoginBackgroundColor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 450px;
+  background-image: linear-gradient(to right, #485563, #29323c);
 }
 /*  main page form editing is here*/
 .mainPageContainer {
@@ -273,16 +326,58 @@
   box-shadow: 5px 5px 10px black;
   border: none;
   border-radius: 22px;
-  padding: 10px ;
+  padding: 10px;
   background-color: gray;
-  background-image: linear-gradient(to right, #bdc3c7 , #2c3e50 );
+  background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+.MainPageForm  {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
+  background-color: black;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
+  color: white;
+}
+.MainPageForm span{
+  margin-right: 10px;
+}
+.CartContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.MainPageForm input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  /* border: 1px solid white; */
+  border: none;
+  width: 45px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  color: white;
+}
+.CartContainer span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .SectionOne {
   background-color: white;
   border: 1px solid;
   text-align: left;
-  padding: 20px 25px;
+  padding: 20px 15px;
   margin: 10px 18px;
   border-radius: 15px;
   box-shadow: 2px 2px 5px black;
@@ -290,7 +385,6 @@
 .SectionOneImg {
   width: auto;
   height: 300px;
- 
 }
 
 .btnSection button {
@@ -305,44 +399,78 @@
 .btnSection input {
   width: 20px;
 }
+.cartInputBox{
+  color: black;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+}
 .CartSymbol {
   width: auto;
-  height: 30px;
-  margin-right: 15px;
+  height: 25px;
+ 
 }
-.CartSymbol sup {
-  width: 20px;
-  margin-left: 5px;
-  font-size: 20px;
-  font-weight: 300;
-}
-.NavbarMain{
+
+.NavbarMain {
   background-color: white;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient();
   align-items: center;
   text-align: center;
   border-bottom: 1px solid;
   box-shadow: 2px 2px 5px black;
   height: 50px;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
 }
-.NavbarHeadingMain{
+.NavbarHeadingMain {
   display: flex;
   width: auto;
   margin-left: auto;
   margin-right: auto;
 }
-.CartLink{
+.CartLink {
   text-decoration: none;
-  color:  black;
+  color: white;
 }
 
 /* cart component editing is here */
-.cartContainer{
+.CartNavbar{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-bottom:1px solid white;
+}
+.CartImg{
+  width: auto;
+  height: 150px;
+}
+.CartBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 10px 150px;
+  border-radius: 15px;
+
+}
+.CartBox input{
+  width: 20px;
+  margin: 5px;
+  border: none;
+}
+.CartBox button{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 2px;
+  margin: 10px;
+}
+
+.cartContainer {
   border: 1px solid;
   display: flex;
   width: 250px;
