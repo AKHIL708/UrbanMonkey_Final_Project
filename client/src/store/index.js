@@ -8,7 +8,7 @@ const reducerFn = (
     return {
       counter: state.counter + 1,
       amount: state.amount + action.product.productPrice,
-      itemName: state.itemName + action.product.productName,
+      itemName: state.itemName + action.product.productName + "\n",
       itemImg: state.itemImg + action.product.productImage,
       itemImgText: state.itemImgText + action.product.productImageText,
     };

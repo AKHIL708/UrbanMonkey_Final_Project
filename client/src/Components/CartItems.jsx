@@ -3,6 +3,8 @@ import { FaCartPlus } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import productList from "../Products/ProductList";
+import CartList from "../CartList/CartList";
+import CartComponent from "./CartComponent";
 
 export default function CartItems() {
   const [state, setState] = useState([]);
@@ -15,7 +17,7 @@ export default function CartItems() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setState((current) => [...current, itemName]);
+    setState((current) => [...current, <CartComponent cartName={itemName} />]);
   }, []);
 
   const IncreaseCartCount = () => {
@@ -23,11 +25,11 @@ export default function CartItems() {
       type: "Increase Cart Count",
     });
   };
-  const DecreaseCartCount = () =>{
+  const DecreaseCartCount = () => {
     dispatch({
-      type : "Decrease Cart Count"
+      type: "Decrease Cart Count",
     });
-  }
+  };
   const cartRoute = (e) => {
     e.preventDefault();
     navigate("/cart");
@@ -67,15 +69,21 @@ export default function CartItems() {
       <div className="CartBox">
         <img className="CartImg" src={itemImg} alt={ItemImgTextt} />
         <h1>
-          {" "}
+          {/* {" "}
           {state.map((e, index) => {
             return <p key={index}>{e}</p>;
-          })}{" "}
+          })}{" "} */}
+          {state.map((item)=>{
+           return  <li>{item}</li>
+          })
+          }
         </h1>
         <div>
           <button onClick={IncreaseCartCount}>+</button>
           <input type="text" placeholder="0" value={counter} />
-          <button style={{ padding: "4px" }} onClick={DecreaseCartCount} >-</button>
+          <button style={{ padding: "4px" }} onClick={DecreaseCartCount}>
+            -
+          </button>
         </div>
       </div>
     </>
