@@ -156,11 +156,9 @@
 }
 
 .mysection {
-  /* border: 1px solid white; */
-  width: 800px;
-  margin-left: 60px;
-  /* margin-bottom: 32px; */
+  border-radius: 20px;
 }
+
 .accounts {
   display: flex;
   justify-content: center;
@@ -171,7 +169,8 @@
 .socialAccounts {
   margin-top: 25px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
   text-decoration: none;
 }
 .socialAccounts a {
@@ -183,17 +182,17 @@
 }
 .iconOne {
   color: white;
-  font-size: 125px;
+  font-size: 55px;
 }
 .iconTwo {
   color: rgb(0, 119, 181);
-  font-size: 125px;
+  font-size: 55px;
 }
 .iconThree {
   /* color:#171515; */
   color: gray;
 
-  font-size: 125px;
+  font-size: 55px;
 }
 
 /*       registration form editing is from here */
