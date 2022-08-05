@@ -45,14 +45,11 @@ export default function MainPage() {
               <ProductComponent
                 productDetails={product}
                 addToCart={() => {
-                  // setState((current) => {
-                  //   ...current,
-                  //    itemName  });
-                  
                   setState((current) => [...current, itemName]);
                   dispatch({
                     type: "Add To Cart",
                     product: product,
+
                   });
                 }}
                 removeFromCart={() =>
@@ -65,10 +62,7 @@ export default function MainPage() {
             );
           })}
       </div>
-      {/* {state.map((data) => {
-        return <li>{data}</li>;
-      })} */}
-
+    
       <Footer />
     </>
   );

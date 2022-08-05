@@ -46,7 +46,7 @@ const productList = [
     productImage:
       "https://m.media-amazon.com/images/I/61vhT+37vhL._AC_UX385_.jpg",
     productImageText: "Jeans",
-    productName: "Boys RIpped Jeans",
+    productName: "Boys Ripped Jeans",
     productPrice: 1800,
     productQuantity: 10,
     productRating: 4.2,
@@ -88,5 +88,33 @@ const productList = [
     productQuantity: 10,
     productRating: 5,
   },
+  {
+    id: 9,
+    productImage:"https://www.pngall.com/wp-content/uploads/5/Men-Jeans-PNG-HD-Image.png",
+    productImageText: "Denim Jeans",
+    productName: "Denim Jeans",
+    productPrice: 1900,
+    productQuantity: 10,
+    productRating: 5,
+  },
+   {
+    id: 10,
+    productImage:"https://m.media-amazon.com/images/I/71AgUK2NGPL._UX569_.jpg",
+    productImageText: "Denim Jeans",
+    productName: "PowerLook Shirt",
+    productPrice: 900,
+    productQuantity: 10,
+    productRating: 5,
+  },
+   {
+    id: 11,
+    productImage:"https://m.media-amazon.com/images/I/71LI7y2Z4LL._UL1024_.jpg",
+    productImageText: "Denim Jeans",
+    productName: "Printed Shirt",
+    productPrice: 900,
+    productQuantity: 10,
+    productRating: 5,
+  },
+  
 ];
 export default productList;

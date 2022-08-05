@@ -1,7 +1,6 @@
-import React from "react";
-
 export default function ProductComponent(props) {
   
+
   return (
     <div className="SectionOne">
       <img
@@ -13,24 +12,14 @@ export default function ProductComponent(props) {
       <p>₹ {props.productDetails.productPrice}-/</p>
       <p>Qty : {props.productDetails.productQuantity}</p>
       <p>Rating : {props.productDetails.productRating}</p>
-      <div className="btnSection">
-        <button style={{ backgroundColor: "black" }} onClick={props.addToCart}>
-          Add to Cart
-        </button>
-        <span  style={{
-          margin:"0px 5px",
-          color : "black",
-          marginLeft: " 15px",   
-          fontWeight : "bolder",
-          border : "none",
-          height : "25px"
-
-        }}> 0 </span>
+      <div className="btnSection" >
         <button
-          style={{ backgroundColor: "gray" }}
-          onClick={props.removeFromCart}
+          className="AddCartBtn"
+         
+        
+          onClick={props.addToCart}
         >
-          Remove
+       Add To Cart
         </button>
       </div>
     </div>
