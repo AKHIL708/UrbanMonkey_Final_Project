@@ -115,6 +115,44 @@ const productList = [
     productQuantity: 10,
     productRating: 5,
   },
+   {
+    id: 12,
+    productImage:"https://cdn.shopify.com/s/files/1/0661/7423/products/sunset-sherbet-front-zoom_250x250@2x.jpg?v=1658567190",
+    productImageText: "Denim Jeans",
+    productName: "Sun-Set Share Bet",
+    productPrice: 1100,
+    productQuantity: 10,
+    productRating: 5,
+  },
+  {
+    id: 13,
+    productImage:"https://cdn.shopify.com/s/files/1/0661/7423/products/dream-cream-back.jpg?v=1630389483",
+    productImageText: "Denim Jeans",
+    productName: "Dream Cream T-shirt",
+    productPrice: 1300,
+    productQuantity: 10,
+    productRating: 5,
+  },
+  {
+    id: 14,
+    productImage:"https://cdn.shopify.com/s/files/1/0661/7423/products/life-is-better-when-you-paint-style-back_250x250@2x.jpg?v=1639395982",
+    productImageText: "Denim Jeans",
+    productName: "Day Black T-shirt",
+    productPrice: 800,
+    productQuantity: 10,
+    productRating: 5,
+  },
+  {
+    id: 15,
+    productImage:"https://cdn.shopify.com/s/files/1/0661/7423/products/eat-together-style-front.jpg?v=1655538137",
+    productImageText: "Denim Jeans",
+    productName: "Go-Together T-shirt",
+    productPrice: 800,
+    productQuantity: 10,
+    productRating: 5,
+  },
+  
+  
   
 ];
 export default productList;

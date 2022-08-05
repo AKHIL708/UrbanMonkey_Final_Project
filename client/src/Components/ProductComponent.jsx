@@ -14,12 +14,10 @@ export default function ProductComponent(props) {
       <p>Rating : {props.productDetails.productRating}</p>
       <div className="btnSection" >
         <button
-          className="AddCartBtn"
-         
-        
+          className='AddCartBtn'
           onClick={props.addToCart}
         >
-       Add To Cart
+          Add To Cart
         </button>
       </div>
     </div>

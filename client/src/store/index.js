@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 
 const reducerFn = (
-  state = { counter: 0, amount: 0, itemName: "", itemImg: "", itemImgText: "" },
+  state = { counter: 0, amount: 0, itemName: "", itemImg: "", itemImgText: "" , CartBtn:"Add To Cart" },
   action
 ) => {
   if (action.type === "Add To Cart") {
@@ -29,7 +29,11 @@ const reducerFn = (
       counter: state.counter - 1,
     };
   }
-
+ if(action.type === "Toggle Cart Btn"){
+  return {
+    CartBtn : "Remove"
+  }
+ }
   return state;
 };
 

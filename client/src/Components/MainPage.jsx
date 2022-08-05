@@ -22,7 +22,7 @@ export default function MainPage() {
   return (
     <>
       <div className="NavbarMain">
-        <h1 className="NavbarHeadingMain">Urban Monkey </h1>
+        <h1 className="NavbarHeadingMain">Urban Monkey</h1>
       </div>
       <form className="MainPageForm">
         <div className="CartContainer">
@@ -46,10 +46,11 @@ export default function MainPage() {
                 productDetails={product}
                 addToCart={() => {
                   setState((current) => [...current, itemName]);
+                 
+                  
                   dispatch({
                     type: "Add To Cart",
                     product: product,
-
                   });
                 }}
                 removeFromCart={() =>
@@ -62,7 +63,7 @@ export default function MainPage() {
             );
           })}
       </div>
-    
+
       <Footer />
     </>
   );
