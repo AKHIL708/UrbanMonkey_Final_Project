@@ -9,12 +9,24 @@ import CartComponent from "./CartComponent";
 export default function CartItems() {
   const [state, setState] = useState([]);
   const counter = useSelector((state) => state.counter);
-  const amount = useSelector((state) => state.amount);
+  const totalCartAmount = useSelector((state) => state.amount);
   const itemName = useSelector((state) => state.itemName);
   const itemImg = useSelector((state) => state.itemImg);
   const ItemImgTextt = useSelector((state) => state.itemImgText);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  console.log(`Item Names : ${itemName}`);
+
+  const arrOfItemNames = itemName.slice(0, -1).split(",");
+
+  const productCounts = {};
+
+  for (const product of arrOfItemNames) {
+    productCounts[product] = productCounts[product]
+      ? productCounts[product] + 1
+      : 1;
+  }
 
   useEffect(() => {
     setState((current) => [...current, <CartComponent cartName={itemName} />]);
@@ -43,40 +55,35 @@ export default function CartItems() {
       <div className="CartNavbar">
         <h1>Cart Items</h1>
       </div>
-      <form method="POST" className="MainPageForm">
-        <div className="CartContainer">
-          <a href="/cart" onClick={cartRoute} className="CartLink">
-            {" "}
-            <FaCartPlus className="CartSymbol" />
-          </a>
-          <input
-            type="text"
-            onChange={(e) => e.target.value}
-            name="cartCount"
-            value={counter}
-          />
-        </div>
-        <div className="CartContainer">
-          <span>Total : </span>
-          <input
-            type="text"
-            onChange={(e) => e.target.value}
-            name="totalAmount"
-            value={amount}
-          />
-        </div>
-      </form>
-      <div className="CartBox">
+      {/* <div className="CartContainer">
+        <a href="/cart" onClick={cartRoute} className="CartLink">
+          {" "}
+          <FaCartPlus className="CartSymbol" />
+        </a>
+        <input
+          type="text"
+          onChange={(e) => e.target.value}
+          name="cartCount"
+          value={counter}
+        />
+      </div> */}
+      <div>
+        <center>
+          <br />
+          <br />
+          <div>Total Cart Amount : {totalCartAmount}</div>
+          <br />
+          <div>Cart Items Count: {counter}</div>
+          <div> Items: {JSON.stringify(productCounts)}</div>
+          <br />
+        </center>
+      </div>
+      {/* <div className="CartBox">
         <img className="CartImg" src={itemImg} alt={ItemImgTextt} />
         <h1>
-          {/* {" "}
-          {state.map((e, index) => {
-            return <p key={index}>{e}</p>;
-          })}{" "} */}
-          {state.map((item)=>{
-           return  <li>{item}</li>
-          })
-          }
+          {state.map((item) => {
+            return <li>{item}</li>;
+          })}
         </h1>
         <div>
           <button onClick={IncreaseCartCount}>+</button>
@@ -85,7 +92,7 @@ export default function CartItems() {
             -
           </button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

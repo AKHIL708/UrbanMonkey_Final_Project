@@ -1,14 +1,21 @@
 import { createStore } from "redux";
 
 const reducerFn = (
-  state = { counter: 0, amount: 0, itemName: "", itemImg: "", itemImgText: "" , CartBtn:"Add To Cart" },
+  state = {
+    counter: 0,
+    amount: 0,
+    itemName: "",
+    itemImg: "",
+    itemImgText: "",
+    CartBtn: "Add To Cart",
+  },
   action
 ) => {
   if (action.type === "Add To Cart") {
     return {
       counter: state.counter + 1,
       amount: state.amount + action.product.productPrice,
-      itemName: state.itemName + action.product.productName + "\n",
+      itemName: state.itemName + action.product.productName + ",",
       itemImg: state.itemImg + action.product.productImage,
       itemImgText: state.itemImgText + action.product.productImageText,
     };
@@ -29,11 +36,11 @@ const reducerFn = (
       counter: state.counter - 1,
     };
   }
- if(action.type === "Toggle Cart Btn"){
-  return {
-    CartBtn : "Remove"
+  if (action.type === "Toggle Cart Btn") {
+    return {
+      CartBtn: "Remove",
+    };
   }
- }
   return state;
 };
 
