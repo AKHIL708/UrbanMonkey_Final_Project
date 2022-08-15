@@ -17,7 +17,10 @@ const reducerFn = (
       amount: state.amount + action.product.productPrice,
       itemName: action.product.productName,
       itemImg: action.product.productImage,
-      itemImgText: action.product.productImageText
+      itemImgText: action.product.productImageText,
+      itemName: state.itemName + action.product.productName + ",",
+      itemImg: state.itemImg + action.product.productImage,
+      itemImgText: state.itemImgText + action.product.productImageText,
     };
   }
   if (action.type === "Remove From Cart") {

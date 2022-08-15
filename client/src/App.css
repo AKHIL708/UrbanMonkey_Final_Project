@@ -133,7 +133,7 @@
   background-color: rgb(1, 1, 19);
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
 }
@@ -156,7 +156,8 @@
 }
 
 .mysection {
-  border-radius: 20px;
+  /* border-radius: 20px; */
+  background-color: black;
 }
 
 .accounts {
@@ -167,32 +168,35 @@
   align-items: center;
 }
 .socialAccounts {
-  margin-top: 25px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  height: 40px;
   text-decoration: none;
 }
 .socialAccounts a {
   text-decoration: none;
-  margin: 0px 80px;
+  margin: 0px 20px;
 }
 .accounts {
   text-decoration: underline;
 }
 .iconOne {
   color: white;
-  font-size: 55px;
+  font-size: 35px;
 }
 .iconTwo {
   color: rgb(0, 119, 181);
-  font-size: 55px;
+  font-size: 35px;
 }
 .iconThree {
-  /* color:#171515; */
   color: gray;
-
-  font-size: 55px;
+  font-size: 35px;
+}
+.iconThree:hover {
+  cursor: pointer;
 }
 
 /*       registration form editing is from here */
@@ -381,11 +385,9 @@
   margin: 10px 8px;
   border-radius: 15px;
 }
-.SectionOne:hover{
+.SectionOne:hover {
   box-shadow: 8px 15px 16px black;
   transition-duration: 0.3s;
-
-
 }
 .SectionOneImg {
   display: flex;
@@ -500,7 +502,7 @@
 
 /*Cart Component editing is here  */
 
-.CartComponentImg{
- height: 175px;
- width: auto;
+.CartComponentImg {
+  height: 175px;
+  width: auto;
 }

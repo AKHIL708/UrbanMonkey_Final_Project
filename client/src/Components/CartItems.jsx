@@ -7,23 +7,24 @@ import CartComponent from "./CartComponent";
 export default function CartItems() {
   const [state, setState] = useState([]);
   const counter = useSelector((state) => state.counter);
-  const amount = useSelector((state) => state.amount);
+  const totalCartAmount = useSelector((state) => state.amount);
   const itemName = useSelector((state) => state.itemName);
   const itemImg = useSelector((state) => state.itemImg);
   const ItemImgTextt = useSelector((state) => state.itemImgText);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const arrOfItemNames = itemName.slice(0, -1).split(",");
+
+  const productCounts = {};
+
+  for (const product of arrOfItemNames) {
+    productCounts[product] = productCounts[product]
+      ? productCounts[product] + 1
+      : 1;
+  }
+
   useEffect(() => {
-    // setState((current) => [
-    //   ...current,
-    //   <CartComponent
-    //     cartName={itemName}
-    //     cartImg={itemImg}
-    //     AltTxt={ItemImgTextt}
-    //   />,
-    // ]);
-    console.log(state.length);
     updating();
   }, []);
   function updating() {
@@ -76,23 +77,22 @@ export default function CartItems() {
             type="text"
             onChange={(e) => e.target.value}
             name="totalAmount"
-            value={amount}
+            value={totalCartAmount}
           />
         </div>
       </form>
       <div className="CartBox">
-        <li>
-          {state.map((item, index) => {
-            console.log(state);
-            return <li key={index}>{item}</li>;
-          })}
-        </li>
         <div>
-          <button onClick={IncreaseCartCount}>+</button>
-          <input type="text" placeholder="0" value={counter} />
-          <button style={{ padding: "4px" }} onClick={DecreaseCartCount}>
-            -
-          </button>
+          <center>
+            <br />
+            <br />
+            <img src={itemImg} alt="demo" />
+            <div>Total Cart Amount : {totalCartAmount}</div>
+            <br />
+            <div>Cart Items Count: {counter}</div>
+            <div> Items: {JSON.stringify(productCounts)}</div>
+            <br />
+          </center>
         </div>
       </div>
     </>
