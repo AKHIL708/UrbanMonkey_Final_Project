@@ -46,19 +46,12 @@ export default function MainPage() {
                 productDetails={product}
                 addToCart={() => {
                   setState((current) => [...current, itemName]);
-                 
-                  
                   dispatch({
                     type: "Add To Cart",
                     product: product,
+                  
                   });
                 }}
-                removeFromCart={() =>
-                  dispatch({
-                    type: "Remove From Cart",
-                    product: product,
-                  })
-                }
               />
             );
           })}

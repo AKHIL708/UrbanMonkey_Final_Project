@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaVoicemail } from "react-icons/fa";
 import { FaKey } from "react-icons/fa";
 
-export default function Login() {
+export default function Login() { 
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();

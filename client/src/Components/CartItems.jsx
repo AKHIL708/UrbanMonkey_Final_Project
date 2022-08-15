@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import productList from "../Products/ProductList";
-import CartList from "../CartList/CartList";
 import CartComponent from "./CartComponent";
 
 export default function CartItems() {
@@ -17,8 +15,27 @@ export default function CartItems() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    setState((current) => [...current, <CartComponent cartName={itemName} />]);
+    // setState((current) => [
+    //   ...current,
+    //   <CartComponent
+    //     cartName={itemName}
+    //     cartImg={itemImg}
+    //     AltTxt={ItemImgTextt}
+    //   />,
+    // ]);
+    console.log(state.length);
+    updating();
   }, []);
+  function updating() {
+    setState((current) => [
+      ...current,
+      <CartComponent
+        cartName={itemName}
+        cartImg={itemImg}
+        AltTxt={ItemImgTextt}
+      />,
+    ]);
+  }
 
   const IncreaseCartCount = () => {
     dispatch({
@@ -35,13 +52,10 @@ export default function CartItems() {
     navigate("/cart");
   };
 
-  // {state.map((e) => {
-  //   return <p>{e}</p>;
-  // })}
   return (
     <>
       <div className="CartNavbar">
-        <h1>Cart Items</h1>
+        <h1>Cart Items </h1>
       </div>
       <form method="POST" className="MainPageForm">
         <div className="CartContainer">
@@ -67,17 +81,12 @@ export default function CartItems() {
         </div>
       </form>
       <div className="CartBox">
-        <img className="CartImg" src={itemImg} alt={ItemImgTextt} />
-        <h1>
-          {/* {" "}
-          {state.map((e, index) => {
-            return <p key={index}>{e}</p>;
-          })}{" "} */}
-          {state.map((item)=>{
-           return  <li>{item}</li>
-          })
-          }
-        </h1>
+        <li>
+          {state.map((item, index) => {
+            console.log(state);
+            return <li key={index}>{item}</li>;
+          })}
+        </li>
         <div>
           <button onClick={IncreaseCartCount}>+</button>
           <input type="text" placeholder="0" value={counter} />

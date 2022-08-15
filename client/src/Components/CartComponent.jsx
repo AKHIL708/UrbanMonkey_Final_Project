@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
 
 export default function CartComponent(props) {
   return (
-  <h1>
-   {props.cartName}
-  </h1>
-  )
+    <ul>
+      <img className="CartComponentImg" src={props.cartImg} alt={props.AltTxt} />
+     <h3>{props.cartName}</h3> 
+    </ul>
+  );
 }

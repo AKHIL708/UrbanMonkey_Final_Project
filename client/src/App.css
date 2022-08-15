@@ -330,7 +330,7 @@
   background-image: linear-gradient(to right, #bdc3c7, #2c3e50);
 }
 
-.MainPageForm  {
+.MainPageForm {
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -342,16 +342,16 @@
   z-index: 3;
   color: white;
 }
-.MainPageForm span{
+.MainPageForm span {
   margin-right: 10px;
 }
-.CartContainer{
+.CartContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.MainPageForm input{
+.MainPageForm input {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -364,7 +364,7 @@
   margin-bottom: 5px;
   color: white;
 }
-.CartContainer span{
+.CartContainer span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -380,7 +380,12 @@
   padding: 20px 15px;
   margin: 10px 8px;
   border-radius: 15px;
-  box-shadow: 2px 2px 5px black;
+}
+.SectionOne:hover{
+  box-shadow: 8px 15px 16px black;
+  transition-duration: 0.3s;
+
+
 }
 .SectionOneImg {
   display: flex;
@@ -400,7 +405,7 @@
   margin-top: 2px;
   margin: 0px 2px;
 }
-.RemoveCartBtn{
+.RemoveCartBtn {
   width: 100px;
   cursor: pointer;
   height: 30px;
@@ -411,8 +416,7 @@
   margin: 0px 2px;
 }
 
-
-.cartInputBox{
+.cartInputBox {
   color: black;
   background-color: transparent;
   border: none;
@@ -421,7 +425,6 @@
 .CartSymbol {
   width: auto;
   height: 25px;
- 
 }
 
 .NavbarMain {
@@ -446,20 +449,20 @@
 }
 
 /* cart component editing is here */
-.CartNavbar{
+.CartNavbar {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   background-color: black;
   color: white;
-  border-bottom:1px solid white;
+  border-bottom: 1px solid white;
 }
-.CartImg{
+.CartImg {
   width: auto;
   height: 150px;
 }
-.CartBox{
+.CartBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -468,14 +471,13 @@
   padding: 5px;
   margin: 10px 150px;
   border-radius: 15px;
-
 }
-.CartBox input{
+.CartBox input {
   width: 20px;
   margin: 5px;
   border: none;
 }
-.CartBox button{
+.CartBox button {
   background-color: black;
   border: none;
   color: white;
@@ -494,4 +496,11 @@
   border: none;
   border-radius: 10px;
   text-align: left;
+}
+
+/*Cart Component editing is here  */
+
+.CartComponentImg{
+ height: 175px;
+ width: auto;
 }
