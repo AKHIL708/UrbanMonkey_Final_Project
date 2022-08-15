@@ -92,7 +92,7 @@ const productList = [
   {
     id: 9,
     productImage:
-      "https://www.pngall.com/wp-content/uploads/5/Men-Jeans-PNG-HD-Image.png",
+      "https://product.hstatic.net/200000219127/product/kombat-pant1_326bde14d71248929afa9ea11ee65193_master.jpg",
     productImageText: "Denim Jeans",
     productName: "Denim Jeans",
     productPrice: 1900,
