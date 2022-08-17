@@ -3,6 +3,8 @@ import { FaCartPlus } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import CartComponent from "./CartComponent";
+import ProductComponent from "./ProductComponent";
+import productList from "../Products/ProductList";
 
 export default function CartItems() {
   const [state, setState] = useState([]);
@@ -23,6 +25,8 @@ export default function CartItems() {
       ? productCounts[product] + 1
       : 1;
   }
+
+  const productCountsArray = Object.entries(productCounts);
 
   useEffect(() => {
     updating();
@@ -81,19 +85,42 @@ export default function CartItems() {
           />
         </div>
       </form>
-      <div className="CartBox">
-        <div>
-          <center>
-            <br />
-            <br />
-            <img src={itemImg} alt="demo" />
+      <div>
+        <center>
+          <div>
             <div>Total Cart Amount : {totalCartAmount}</div>
-            <br />
             <div>Cart Items Count: {counter}</div>
-            <div> Items: {JSON.stringify(productCounts)}</div>
-            <br />
-          </center>
-        </div>
+
+            {productCountsArray.map((product) => {
+              return (
+                <div>
+                  <span style={{ fontWeight: "bold", margin: "1rem" }}>
+                    {product[0]}
+                  </span>
+                  <input
+                    style={{ padding: "0.25rem" }}
+                    type="button"
+                    value={"+"}
+                  />
+                  <span
+                    style={{
+                      color: "grey",
+                      fontWeight: "bold",
+                      margin: "1rem",
+                    }}
+                  >
+                    {product[1]}
+                  </span>
+                  <input
+                    style={{ padding: "0.25rem" }}
+                    type="button"
+                    value={"-"}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </center>
       </div>
     </>
   );

@@ -1,6 +1,4 @@
 export default function ProductComponent(props) {
-  
-
   return (
     <div className="SectionOne">
       <img
@@ -12,11 +10,8 @@ export default function ProductComponent(props) {
       <p>₹ {props.productDetails.productPrice}-/</p>
       <p>Qty : {props.productDetails.productQuantity}</p>
       <p>Rating : {props.productDetails.productRating}</p>
-      <div className="btnSection" >
-        <button
-          className='AddCartBtn'
-          onClick={props.addToCart}
-        >
+      <div className="btnSection">
+        <button className="AddCartBtn" onClick={props.addToCart}>
           Add To Cart
         </button>
       </div>
