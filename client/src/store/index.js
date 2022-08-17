@@ -32,6 +32,7 @@ const reducerFn = (
   if (action.type === "Increase Cart Count") {
     return {
       counter: state.counter + 1,
+      amount : state.amount + action.product.productPrice
     };
   }
   if (action.type === "Decrease Cart Count") {

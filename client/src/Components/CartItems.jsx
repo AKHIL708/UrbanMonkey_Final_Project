@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import CartComponent from "./CartComponent";
+import Footer from "../Components/Footer"
+
 import ProductComponent from "./ProductComponent";
 import productList from "../Products/ProductList";
 
@@ -28,34 +29,14 @@ export default function CartItems() {
 
   const productCountsArray = Object.entries(productCounts);
 
-  useEffect(() => {
-    updating();
-  }, []);
-  function updating() {
-    setState((current) => [
-      ...current,
-      <CartComponent
-        cartName={itemName}
-        cartImg={itemImg}
-        AltTxt={ItemImgTextt}
-      />,
-    ]);
-  }
 
-  const IncreaseCartCount = () => {
-    dispatch({
-      type: "Increase Cart Count",
-    });
-  };
-  const DecreaseCartCount = () => {
-    dispatch({
-      type: "Decrease Cart Count",
-    });
-  };
   const cartRoute = (e) => {
     e.preventDefault();
     navigate("/cart");
   };
+  const x = productList && productList.map((product)=>{
+    return product
+  })
 
   return (
     <>
@@ -76,7 +57,7 @@ export default function CartItems() {
           />
         </div>
         <div className="CartContainer">
-          <span>Total : </span>
+          <span>Total Amount: </span>
           <input
             type="text"
             onChange={(e) => e.target.value}
@@ -88,19 +69,40 @@ export default function CartItems() {
       <div>
         <center>
           <div>
-            <div>Total Cart Amount : {totalCartAmount}</div>
-            <div>Cart Items Count: {counter}</div>
+            {/* <div>Total Cart Amount : {totalCartAmount}</div>
+            <div>Cart Items Count: {counter}</div> */}
 
             {productCountsArray.map((product) => {
               return (
-                <div>
-                  <span style={{ fontWeight: "bold", margin: "1rem" }}>
-                    {product[0]}
-                  </span>
+                <div className="CartItemsEditing">
+                  <img className="CartImg" src="https://m.media-amazon.com/images/I/51ATCvhe0nL._AC_UX385_.jpg" alt="cloth Image" />
+                  <div className="CartItemNames_Data">
+                   <h3  style={{ fontWeight: "bold", margin: "1rem" }}>
+                     {product[0]} 
+                    </h3>
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat earum cupiditate nesciunt explicabo eum aperiam ut illum est, eius esse?</p>
+                  </div>
+                  <div>
                   <input
-                    style={{ padding: "0.25rem" }}
+                    style={{ padding: "0.25rem"}}
                     type="button"
                     value={"+"}
+                    onClick={() => {
+                      productList &&
+                        productList.map((product) => {
+                          dispatch({
+                            type: "Add To Cart",
+                            product: product,
+                          });
+                        });
+                    }}
+                  //  onClick={()=>{
+                  //   dispatch({
+                  //     type : "Add To Cart",
+                  //     product : x
+                  //   })
+                  //  }}
                   />
                   <span
                     style={{
@@ -112,16 +114,21 @@ export default function CartItems() {
                     {product[1]}
                   </span>
                   <input
-                    style={{ padding: "0.25rem" }}
+                    style={{ padding: "0.25rem",backgroundColor:"red" }}
                     type="button"
                     value={"-"}
+                    onClick={() => {
+                      window.alert(" - clicked for now")
+                    }}
                   />
+                  </div>
                 </div>
               );
             })}
           </div>
         </center>
       </div>
+      <Footer/>
     </>
   );
 }

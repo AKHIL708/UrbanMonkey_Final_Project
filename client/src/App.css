@@ -506,3 +506,41 @@
   height: 175px;
   width: auto;
 }
+.CartItemsEditing{
+  /* border: 1px solid black; */
+  background-image: linear-gradient(to right , white , rgb(241, 238, 221));
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 18px 35px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding: 0px 55px;
+}
+.CartItemsEditing:hover{
+  box-shadow: 5px 5px 15px black;
+  transition-duration: 0.3s;
+
+}
+.CartItemsEditing input{
+  background-color: rgb(25, 231, 25);
+  border: none;
+  color: white;
+}
+.CartItemNames_Data{
+  /* border: 1px solid; */
+  text-align: left;
+  width: 550px
+}
+
+.CartItemNames_Data p{
+  color: gray;
+}
+.CartItemNames_Data h3{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifCartItemNames_Data;
+  font-weight: bolder;
+  color: black;
+  font-size: 25px;
+  text-shadow: 2px 3px 3px gray;
+}
